@@ -1,0 +1,32 @@
+{
+  "name": "study-timer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch:css": "pnpm dlx @tailwindcss/cli -i ./src/styles/input.css -o ./src/styles/style.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.16.1",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@12.16.1",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^45.2.0",
+    "electron-builder": "^26.18.0",
+    "electron-updater": "^6.8.11"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
