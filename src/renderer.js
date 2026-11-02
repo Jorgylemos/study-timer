@@ -1,19 +1,18 @@
 const screenTimer = document.getElementById("screen-timer");
+const svgTimer = document.getElementById("svg-timer");
+const explosion = document.getElementById("explosion-gif");
+
+
+function playAudio() {
+  var audio = new Audio("../../assets/sounds/explosion-sound.mp3");
+  audio.play(); 
+}
 
 class Timer {
   timeoutId = null; // Number;
-  seconds = 20; // Number;
+  seconds = 5; // Number;
   minutes = 0; // Number;
   active = true;
-
-  element; // HTML Element Type
-
-  /**
-   * @param {HTMLElement} element
-   */
-  constructor(element) {
-    this.element = element;
-  }
 
   /**
    * @function {void}
@@ -25,6 +24,12 @@ class Timer {
         this.seconds = 59;
       }
       if (this.minutes < 0) {
+        playAudio();
+
+        svgTimer.classList.add('hidden');
+        screenTimer.classList.add('hidden');
+        explosion.classList.remove('hidden');
+
         this.stop();
       }
 
@@ -49,9 +54,7 @@ class Timer {
     const minStr = String(this.minutes).padStart(2, "0");
     const secStr = String(this.seconds).padStart(2, "0");
 
-    if (this.element) {
-      this.element.innerText = `${minStr}:${secStr}`;
-    }
+    screenTimer.innerText = `${minStr}:${secStr}`;
   }
 
   /**

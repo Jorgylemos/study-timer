@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Electron App</title>
-   
+
         <meta
             http-equiv="Content-Security-Policy"
             content="default-src 'self'; script-src 'self'"
@@ -26,8 +26,11 @@
                 <h1 id="screen-timer" class="absolute font-mono text-4xl sm:text-5xl font-bold text-red-500 tracking-wider z-10 select-none">
                     00:00
                 </h1>
-            
-                <img class="w-full h-auto drop-shadow-lg" src="../../assets/svg/alarm-clock.svg" alt="Alarm Clock SVG">
+
+                <img id="svg-timer" class="w-full h-auto drop-shadow-lg" src="../../assets/svg/alarm-clock.svg" alt="Alarm Clock SVG">
+
+                <img id="explosion-gif" class="hidden" src="../../assets/images/explosion.gif" alt="Alarm Clock Explosion">
+
             </div>
         </main>
     </body>

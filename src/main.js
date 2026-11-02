@@ -11,10 +11,12 @@ function createWindow() {
     maximizable: false,
     resizable: false,
     autoHideMenuBar: true,
+    alwaysOnTop: true,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
     },
   });
+
 
   win.loadFile(path.join(__dirname, "/views/index.html"));
 
