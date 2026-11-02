@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Electron App</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Electron App</title>
    
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    >
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    >
-    <link href="../styles/style.css" rel="stylesheet"/>
-</head>
-<body>
-<main class="w-screen h-screen relative flex items-center justify-center overflow-hidden">
-        <header class="fixed top-0 left-0 w-full h-8 flex justify-end p-2 z-10">
-            <button class="text-xl">📌</button>
-        </header>
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self'"
+        >
 
-        <div class="relative flex items-center justify-center w-full max-w-lg p-4">
-            <h1 class="absolute font-mono text-4xl sm:text-5xl font-bold text-red-500 tracking-wider z-10 select-none">
-                00:00
-            </h1>
+        <meta
+            http-equiv="X-Content-Security-Policy"
+            content="default-src 'self'; script-src 'self'"
+        >
+
+        <link href="../styles/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <main class="w-screen h-screen relative flex items-center justify-center overflow-hidden">
+            <header class="fixed top-0 left-0 w-full h-8 flex justify-end p-2 z-10">
+                <button class="text-xl">📌</button>
+            </header>
+
+            <div class="relative flex items-center justify-center w-full max-w-lg p-4">
+                <h1 id="screen-timer" class="absolute font-mono text-4xl sm:text-5xl font-bold text-red-500 tracking-wider z-10 select-none">
+                    00:00
+                </h1>
             
-            <img class="w-full h-auto drop-shadow-lg" src="../../assets/svg/alarm-clock.svg" alt="Alarm Clock SVG">
-        </div>
-    </main>
-</body>
+                <img class="w-full h-auto drop-shadow-lg" src="../../assets/svg/alarm-clock.svg" alt="Alarm Clock SVG">
+            </div>
+        </main>
+    </body>
+
+    <script src="../renderer.js"></script>
 </html>
